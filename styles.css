@@ -1,0 +1,176 @@
+html {
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+  font-size: 20px;
+}
+
+body {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: black;
+  margin: 1rem;
+}
+
+.clock.body {
+  position: relative;
+  width: 35rem;
+  height: 35rem;
+  border-radius: 50%;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 0.5rem solid white;
+}
+
+#dots-container {
+  position: absolute;
+  width: 69%;
+  height: 69%;
+  border-radius: 50%;
+}
+
+.dot {
+  position: absolute;
+  width: 0.06rem;
+  height: 0.75rem;
+  background-color: white;
+}
+
+#middle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 1.1rem;
+  height: 1rem;
+  border-radius: 45%;
+  transform-origin: middle center;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  background-color: white;
+}
+
+.hand {
+  transform-origin: bottom center;
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  background-color: white;
+}
+
+.hour.hand {
+  width: 0.5rem;
+  height: 10rem;
+  border-radius: 80% 80% 0 0;
+}
+
+.minute.hand {
+  width: 0.4rem;
+  height: 14rem;
+  border-radius: 60% 60% 0 0;
+}
+
+.second.hand {
+  width: 0.2rem;
+  height: 14rem;
+  background-color: red;
+  border-radius: 30% 30% 0 0;
+}
+
+.number {
+  position: absolute;
+  font-weight: bold;
+  font-size: 3rem;
+  text-align: center;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+.number.--1 {
+  top: 12%;
+  left: 71%;
+}
+.number.--2 {
+  top: 28%;
+  left: 88%;
+}
+.number.--3 {
+  top: 50%;
+  left: 94%;
+}
+.number.--4 {
+  top: 72%;
+  left: 88%;
+}
+.number.--5 {
+  top: 88%;
+  left: 72%;
+}
+.number.--6 {
+  top: 93%;
+  left: 50%;
+}
+.number.--7 {
+  top: 88%;
+  left: 28%;
+}
+.number.--8 {
+  top: 72%;
+  left: 12%;
+}
+.number.--9 {
+  top: 50%;
+  left: 6%;
+}
+.number.--10 {
+  top: 28%;
+  left: 13%;
+}
+.number.--11 {
+  top: 12%;
+  left: 29%;
+}
+
+.number.--12 {
+  top: 7%;
+  left: 50%;
+}
+
+/* DIGITAL CLOCK */
+
+#digital-clock-container {
+  display: flex;
+  justify-content: space-evenly;
+  width: 20rem;
+  margin-top: 0.4rem;
+  font-family: monospace;
+}
+
+#digital-clock-container div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.label {
+  position: relative;
+  top: 0.2rem;
+  font-size: 1rem;
+}
+
+.clock,
+.colon {
+  font-size: 4rem;
+  font-weight: bold;
+  color: white;
+}
+
+.colon {
+  position: relative;
+  top: 0.7rem;
+}
